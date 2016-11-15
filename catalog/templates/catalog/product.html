@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load pagination %}
 {% block title %}
     {{ product }} | {{ block.super }}
 {% endblock %}
@@ -18,4 +18,6 @@
       {{ product.description|linebreaks }}
   </div>
 </div>
+
+{% pagination request paginator page_obj  %}
 {% endblock %}
